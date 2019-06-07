@@ -2,8 +2,8 @@ CFLAGS = -g3 -Wall -DYY_NO_UNPUT -DYY_NO_INPUT
 LDFLAGS = -lfl
 
 target = c
-src = c.c eval.c
-headers = c.h eval.h
+src = c.c compile.c eval.c
+headers = c.h compile.h eval.h
 
 lex_target = l.yy.c
 lex_src = l.l

@@ -3,6 +3,7 @@
 
   #include <stdio.h>
   #include "c.h"
+  #include "compile.h"
   #include "eval.h"
 
   int yylex(void);
@@ -24,7 +25,7 @@
 %%
 
 program:
-  cmd_list				{ atom_eval($1); /* eval or compile here */ }
+  cmd_list				{ atom_compile($1, ARCH_X86_64); /* eval or compile here */ }
 ;
 
 cmd_list:
